@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Exercises</title>
+
+<style>
+
+.section{
+    border:1px solid black;
+    padding:5px;
+    margin-bottom:4px;
+}
+
+</style>
+
+</head>
+<body>
+    <div class="section" id="metRan">
+        <range min="0" max="100" value="50"></range>
+        <meter min="0" max="10" value="5"></meter>
+    </div>
+
+    <div class="section" id="phoneNum">
+        <p>Enter a phone number:</p>
+        <input type="text"  pattern="^\d{3}-d{3}-d{4}$?\">
+    </div>
+
+    <div class="section" id="sum">
+        <input type="text" id="numA" placeholder="1st number">
+        +
+        <input type="text" id="numB" placeholder="2nd number">
+        =
+        <input type="text" id="sumAB" placeholder="sum of the 2 numbers">
+
+        <br>
+        <button id="solve" onclick="add()">add them together</button>
+    </div>
+
+    <div class="section" id="pickFlavor">  
+        <label for="choose">Pick a Flavor:</label>
+        <select id="choose">
+            <option value="opt1">Chocolate</option>
+            <option value="opt2">Coconut</option>
+            <option value="opt3">Mint</option>
+            <option value="opt4">Strawberry</option>
+            <option value="opt5">Vanilla</option>
+        </select>
+        <input type="text" id="opt6" placeholder="Other (optional)">
+    </div>
+</body>
+
+<script>
+
+let A = document.getElementById("numA")
+let B = document.getElementById("numB")
+var val = document.getElementById("sumAB")
+                 
+function add() {
+    var sum = A.value + B.value
+    console.log(sum)
+    val.value = sum
+}
+
+
+</script>
+
+</html>
